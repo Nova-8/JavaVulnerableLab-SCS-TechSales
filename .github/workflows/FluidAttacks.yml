@@ -18,4 +18,4 @@ jobs:
         REPO_NAME:
     steps:
       - name: Run Agent check
-        run: forces --token ${FLUID_TOKEN} --strict --repo-name ${REPO_NAME}
+        run: forces --token ${FLUID_TOKEN} --strict --repo-name ${Nova-8_JavaVulnerableLab-SCS-TechSales}
