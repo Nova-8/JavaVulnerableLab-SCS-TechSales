@@ -1,0 +1,21 @@
+name: Fluid Attacks
+
+on:
+  push:
+    branches: ["main" ]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+jobs:
+  forces:
+    runs-on: ubuntu-latest
+    container:
+      image: fluidattacks/forces:latest
+      env:
+        TOKEN:
+        REPO_NAME:
+    steps:
+      - name: Run Agent check
+        run: forces --token ${FLUID_TOKEN} --strict --repo-name ${REPO_NAME}
