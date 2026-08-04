@@ -15,7 +15,6 @@ jobs:
       image: fluidattacks/forces:latest
       env:
         FLUID_TOKEN: ${{ secrets.FLUID_TOKEN }}
-        REPO_NAME:
     steps:
       - name: Run Agent check
-        run: forces --token ${FLUID_TOKEN} --strict --repo-name ${REPO_NAME}
+        run: forces --token ${FLUID_TOKEN} --strict
